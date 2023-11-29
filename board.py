@@ -43,7 +43,7 @@ class Board:
         # TODO: Each object needs a position and not just having the charachter turned into a class
         # Each object should be 50 pixels apart and after 600 pixels the next row should start at 0
         # The top row should only have the player at the beginning.
-        
+        #
         
         self.board = []  # Initialize the board as an empty list
         for i in range(0, len(text_board), 14):
