@@ -1,5 +1,8 @@
+"""
+Author : Brodie Busby
+A python file to hold the object classes (Object,Player,Pooka,Fygar,Rock,Dirt)
+"""
 import pygame 
-import board
 
 class Object:
     """"
@@ -10,7 +13,27 @@ class Object:
         self.hasAnimation = False
         self.animationList = []
         self.health = 100
-
+        self.name = "object"
+    def getName(self):
+        return self.name
+    def setName(self,name):
+        self.name = name
+    
+    
+    def setPosition(self, x, y):
+        """
+        Set new x and ney y
+        Input: X, Y
+        """
+        self.x = x
+        self.y = y
+    def getPosition(self):
+        """
+        Get position
+        """
+        return self.pos
+    
+    
     def setAnimation(self, animationList):
         """
         Set animation for objects
@@ -53,6 +76,7 @@ class Player(Object):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.isUsingSpear = False
+        self.name = "player"
     def useSpear(self):
         pass
     
@@ -88,6 +112,7 @@ class Dirt(Object):
     
     def __init__(self, x, y):
         super().__init__(x, y)
+        self.name = "dirt"
 
         
         
@@ -100,6 +125,7 @@ class Rock(Object):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.playerUnder = False
+        self.name = "rock"
 
     def fall(self):    
         """ If there is nothing under the rock fall down"""
@@ -117,7 +143,7 @@ class Fygar(Enemy):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.isBreathingFire = False
-
+        self.name = "fygar"
 
     def breathFire(self):
         pass
@@ -132,6 +158,7 @@ class Pooka(Enemy):
     def __init__(self, x, y):
         super().__init__(x, y)
         self.isBreathingFire = False
+        self.name = "pooka"
 
 
 
