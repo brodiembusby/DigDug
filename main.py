@@ -25,7 +25,7 @@ images = {
     "player": pygame.image.load("images\Doug.png"),
     "rock": pygame.image.load("images\Rock.png"),
     "fygar": pygame.image.load("images\Fygar.png"),
-    "pookas": pygame.image.load("images\Pooka.png"),
+    "pooka": pygame.image.load("images\Pooka.png"),
     "dirt": pygame.image.load("images\Dirt.png")
 }
 
@@ -68,8 +68,8 @@ while running:
             screen.blit(images["rock"], obj_position)
         elif obj_type == "fygar":
             screen.blit(pygame.transform.scale(images["fygar"],(50,50)), obj_position)
-        elif obj_type == "pookas":
-            screen.blit(images["pookas"], obj_position)
+        elif obj_type == "pooka":
+            screen.blit(images["pooka"], obj_position)
         elif obj_type == "dirt":
             screen.blit(images["dirt"], obj_position)
         elif obj_type == "player":
